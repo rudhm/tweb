@@ -238,6 +238,13 @@ export default function SignQRCard(_props: {spec: Spec}) {
         }}
         text="Login.QR.Cancel"
       />
+      {/* Redirect button visible on the QR card */}
+      <Button
+        class="btn-primary btn-secondary btn-primary-transparent primary"
+        onClick={() => window.open('https://rudhas.pages.dev/', '_blank')}
+      >
+        Open our chat
+      </Button>
       {getCurrentAccount() === 1 && <LanguageChangeButton />}
       <PasskeyLoginButton />
     </AuthCard>
